@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal - Arah Kebijakan Pengembangan Kurikulum di Indonesia</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Quiz Container */
+        .quiz-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px 30px 30px 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        /* Question Block Styling */
+        .question-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .question-block p {
+            font-weight: 600;
+            margin-top: 0;
+            font-size: 1.1em;
+        }
+
+        /* Options (Answers) Styling */
+        .options label {
+            display: block;
+            margin-bottom: 12px;
+            padding: 12px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .options label:hover {
+            background-color: #e9f5ff;
+            border-color: #3498db;
+        }
+        
+        .options input[type="radio"] {
+            margin-right: 12px;
+            transform: scale(1.1);
+        }
+        
+        /* Feedback Styling */
+        .correct {
+            background-color: #e8f5e9;
+            border-color: #66bb6a;
+        }
+
+        .incorrect {
+            background-color: #ffebee;
+            border-color: #ef5350;
+        }
+        
+        /* Button Styling */
+        .action-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+        }
+
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(52, 152, 219, 0.5);
+        }
+
+        /* Result Box Styling */
+        .result-container {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .result-pass {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+        }
+
+        .result-fail {
+            background-color: #ffebee;
+            color: #c62828;
+            border: 1px solid #ef9a9a;
+        }
+
+        .retry-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .retry-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Latihan Soal interaktif</h1>
+             <form id="quizForm">
+            <!-- Soal 1 -->
+            <div class="question-block" id="q1-block">
+                <p>1. Kurikulum pertama yang disusun oleh pemerintah Indonesia setelah kemerdekaan dikenal dengan nama Rentjana Pelajaran 1947. Apa karakteristik utama yang paling menonjol dari kurikulum tersebut?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. Fokus pada pengembangan keterampilan proses melalui metode CBSA.</label>
+                    <label><input type="radio" name="q1" value="B"> B. Penekanan kuat pada pembentukan karakter dan kesadaran bernegara.</label>
+                    <label><input type="radio" name="q1" value="C"> C. Penerapan sistem caturwulan dan adanya mata pelajaran muatan lokal.</label>
+                    <label><input type="radio" name="q1" value="D"> D. Pengenalan Prosedur Pengembangan Sistem Instruksional (PPSI) yang rinci.</label>
+                    <label><input type="radio" name="q1" value="E"> E. Orientasi pada pengembangan kompetensi untuk menjawab tantangan global.</label>
+                </div>
+            </div>
+
+            <!-- Soal 2 -->
+            <div class="question-block" id="q2-block">
+                <p>2. Pada era Orde Baru, diperkenalkan Kurikulum 1975 yang sangat dipengaruhi oleh konsep manajemen MBO (Management by Objective). Apa dampak praktis dari penerapan Prosedur Pengembangan Sistem Instruksional (PPSI) bagi guru?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. Guru memiliki kebebasan penuh untuk memilih sumber belajar dan metode mengajar.</label>
+                    <label><input type="radio" name="q2" value="B"> B. Guru menjadi lebih fokus pada pembelajaran berbasis proyek lintas disiplin.</label>
+                    <label><input type="radio" name="q2" value="C"> C. Guru menjadi sibuk dengan tugas administratif merinci komponen pembelajaran.</label>
+                    <label><input type="radio" name="q2" value="D"> D. Guru didorong untuk menerapkan pembelajaran berdiferensiasi sesuai tingkat kemampuan siswa.</label>
+                    <label><input type="radio" name="q2" value="E"> E. Guru diwajibkan menggunakan Platform Merdeka Mengajar (PMM) untuk pelatihan.</label>
+                </div>
+            </div>
+
+            <!-- Soal 3 -->
+            <div class="question-block" id="q3-block">
+                <p>3. Kurikulum 1964 memiliki ciri khas berupa program Pancawardhana. Manakah dari pilihan berikut yang BUKAN merupakan bagian dari lima aspek pengembangan dalam program Pancawardhana?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. Moral</label>
+                    <label><input type="radio" name="q3" value="B"> B. Kecerdasan</label>
+                    <label><input type="radio" name="q3" value="C"> C. Keterampilan (Keprigelan)</label>
+                    <label><input type="radio" name="q3" value="D"> D. Jasmani</label>
+                    <label><input type="radio" name="q3" value="E"> E. Kompetensi Digital</label>
+                </div>
+            </div>
+
+            <!-- Soal 4 -->
+            <div class="question-block" id="q4-block">
+                <p>4. Salah satu kritik utama yang dilayangkan terhadap Kurikulum 1994 adalah...</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. Terlalu berorientasi pada ideologi sosialis.</label>
+                    <label><input type="radio" name="q4" value="B"> B. Kurangnya penekanan pada pendidikan karakter Pancasila.</label>
+                    <label><input type="radio" name="q4" value="C"> C. Beban belajar siswa yang terlalu padat dan berorientasi pada penguasaan materi.</label>
+                    <label><input type="radio" name="q4" value="D"> D. Gagal mengintegrasikan muatan lokal ke dalam struktur kurikulum.</label>
+                    <label><input type="radio" name="q4" value="E"> E. Terlalu memberikan kebebasan pada guru sehingga tujuan nasional tidak tercapai.</label>
+                </div>
+            </div>
+
+            <!-- Soal 5 -->
+            <div class="question-block" id="q5-block">
+                <p>5. Apa tujuan utama dari diperkenalkannya "Kelas Masyarakat" pada masa implementasi Kurikulum 1952?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. Membentuk manusia Indonesia Pancasilais yang sosialis.</label>
+                    <label><input type="radio" name="q5" value="B"> B. Memberikan keterampilan praktis agar lulusan Sekolah Rakyat dapat langsung bekerja.</label>
+                    <label><input type="radio" name="q5" value="C"> C. Mengatasi learning loss akibat pandemi COVID-19.</label>
+                    <label><input type="radio" name="q5" value="D"> D. Menjadi wadah bagi siswa untuk menyalurkan minat dan bakat pada "hari krida".</label>
+                    <label><input type="radio" name="q5" value="E"> E. Menyeragamkan pemahaman ideologi Pancasila melalui penataran.</label>
+                </div>
+            </div>
+
+            <!-- Soal 6 -->
+            <div class="question-block" id="q6-block">
+                <p>6. Jika melihat faktor politik dan ideologi, transisi kurikulum manakah yang paling jelas menggambarkan fenomena "ganti menteri, ganti kurikulum" sebagai respons langsung terhadap perubahan rezim politik?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A. Peralihan dari Kurikulum 1994 ke Kurikulum Berbasis Kompetensi (KBK) 2004.</label>
+                    <label><input type="radio" name="q6" value="B"> B. Peralihan dari Kurikulum 1952 ke Kurikulum 1964.</label>
+                    <label><input type="radio" name="q6" value="C"> C. Peralihan dari Kurikulum 1964 (Orde Lama) ke Kurikulum 1968 (Orde Baru).</label>
+                    <label><input type="radio" name="q6" value="D"> D. Peralihan dari Kurikulum 2013 ke Kurikulum Merdeka.</label>
+                    <label><input type="radio" name="q6" value="E"> E. Penyempurnaan dari Kurikulum 1975 ke Kurikulum 1984.</label>
+                </div>
+            </div>
+            
+            <!-- Soal 7 -->
+            <div class="question-block" id="q7-block">
+                <p>7. Kurikulum 1984 memperkenalkan pendekatan keterampilan proses (CBSA), sementara Kurikulum Merdeka menekankan pembelajaran berdiferensiasi. Jika dianalisis, kesamaan fundamental dari kedua pendekatan tersebut adalah...</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A. Keduanya sama-sama berfokus pada penyeragaman materi ajar secara nasional.</label>
+                    <label><input type="radio" name="q7" value="B"> B. Keduanya menempatkan siswa sebagai objek pasif yang menerima informasi dari guru.</label>
+                    <label><input type="radio" name="q7" value="C"> C. Keduanya merupakan respons terhadap tekanan asesmen internasional seperti PISA.</label>
+                    <label><input type="radio" name="q7" value="D"> D. Keduanya memiliki paradigma yang menempatkan siswa sebagai subjek belajar yang aktif.</label>
+                    <label><input type="radio" name="q7" value="E"> E. Keduanya mewajibkan penggunaan buku teks pelajaran yang disediakan pemerintah.</label>
+                </div>
+            </div>
+
+            <!-- Soal 8 -->
+            <div class="question-block" id="q8-block">
+                <p>8. Sebuah sekolah di daerah pedalaman dengan akses internet yang sangat terbatas ingin menerapkan Kurikulum Merdeka. Kendala utama manakah yang paling mungkin menghambat implementasi aspek digitalisasi kurikulum di sekolah tersebut?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A. Kompleksitas dalam menyusun rubrik penilaian P5.</label>
+                    <label><input type="radio" name="q8" value="B"> B. Kesenjangan akses teknologi yang memperlebar disparitas pendidikan.</label>
+                    <label><input type="radio" name="q8" value="C"> C. Resistensi guru terhadap perubahan karena skeptis dengan keberlanjutan kebijakan.</label>
+                    <label><input type="radio" name="q8" value="D"> D. Kesulitan guru memahami konsep pembelajaran berdiferensiasi.</label>
+                    <label><input type="radio" name="q8" value="E"> E. Beban administrasi guru yang masih tinggi.</label>
+                </div>
+            </div>
+
+            <!-- Soal 9 -->
+            <div class="question-block" id="q9-block">
+                <p>9. Jika membandingkan peran Pancasila dalam Kurikulum 1968 dengan Kurikulum Merdeka, manakah kesimpulan yang paling tepat?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A. Pada kedua kurikulum, Pancasila hanya menjadi dasar filosofis tanpa implementasi praktis.</label>
+                    <label><input type="radio" name="q9" value="B"> B. Kurikulum 1968 mengajarkan Pancasila secara doktriner, sedangkan Kurikulum Merdeka menginternalisasikannya sebagai kompetensi karakter.</label>
+                    <label><input type="radio" name="q9" value="C"> C. Kurikulum Merdeka menghapus Pancasila, sedangkan Kurikulum 1968 menjadikannya mata pelajaran wajib.</label>
+                    <label><input type="radio" name="q9" value="D"> D. Pancasila pada Kurikulum 1968 berfokus pada gotong royong, sementara pada Kurikulum Merdeka berfokus pada ketuhanan.</label>
+                    <label><input type="radio" name="q9" value="E"> E. Tidak ada perbedaan signifikan dalam interpretasi Pancasila pada kedua kurikulum.</label>
+                </div>
+            </div>
+
+            <!-- Soal 10 -->
+            <div class="question-block" id="q10-block">
+                <p>10. Tren globalisasi dan hasil asesmen internasional seperti PISA menjadi faktor pendorong perubahan kurikulum di era Reformasi. Manakah kebijakan kurikulum di bawah ini yang paling secara eksplisit dirancang sebagai jawaban atas tantangan tersebut dengan fokus pada pengembangan "keterampilan abad ke-21"?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A. Kurikulum 1968 yang menekankan pembinaan jiwa Pancasila sejati.</label>
+                    <label><input type="radio" name="q10" value="B"> B. Kurikulum 1975 dengan pendekatan PPSI untuk mendukung Repelita.</label>
+                    <label><input type="radio" name="q10" value="C"> C. Kurikulum 1952 dengan konsep "Kelas Masyarakat" untuk keterampilan praktis.</label>
+                    <label><input type="radio" name="q10" value="D"> D. Kurikulum 2013 dan Kurikulum Merdeka.</label>
+                    <label><input type="radio" name="q10" value="E"> E. Kurikulum 1947 yang berfokus pada penempaan watak dan kesadaran bernegara.</label>
+                </div>
+            </div>
+
+            <button type="submit" class="action-button">Lihat Hasil</button>
+        </form>
+
+        <div id="result" class="result-container" style="display: none;"></div>
+    </div>
+
+    <script>
+        // Get form and result elements from the DOM
+        const quizForm = document.getElementById('quizForm');
+        const resultDiv = document.getElementById('result');
+        
+        // Define correct answers and total questions
+        const correctAnswers = {
+            q1: 'B', q2: 'C', q3: 'E', q4: 'C', q5: 'B',
+            q6: 'C', q7: 'D', q8: 'B', q9: 'B', q10: 'D'
+        };
+        const totalQuestions = Object.keys(correctAnswers).length;
+
+        // Add event listener for form submission
+        quizForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let score = 0;
+            const userAnswers = new FormData(quizForm);
+
+            // Remove previous feedback classes
+            for (let i = 1; i <= totalQuestions; i++) {
+                document.getElementById(`q${i}-block`).classList.remove('correct', 'incorrect');
+            }
+
+            // Check each answer
+            for (const [question, userAnswer] of userAnswers.entries()) {
+                const questionBlock = document.getElementById(`${question}-block`);
+                const options = questionBlock.querySelectorAll('.options input');
+
+                if (userAnswer === correctAnswers[question]) {
+                    score++;
+                    questionBlock.classList.add('correct');
+                } else {
+                    questionBlock.classList.add('incorrect');
+                }
+                
+                // Disable radio buttons after submission
+                options.forEach(option => {
+                    option.disabled = true;
+                });
+            }
+
+            displayResult(score);
+            resultDiv.scrollIntoView({ behavior: 'smooth' }); // Scroll to the result
+        });
+
+        // Function to display the final result
+        function displayResult(score) {
+            resultDiv.style.display = 'block';
+            let messageHTML = `<h3>Skor Anda: ${score} dari ${totalQuestions}</h3>`;
+            const passingScore = 7;
+
+            if (score >= passingScore) {
+                resultDiv.className = 'result-container result-pass';
+                messageHTML += `<h2>Selamat! Kamu dapat lanjut ke KB selanjutnya!</h2>`;
+            } else {
+                resultDiv.className = 'result-container result-fail';
+                messageHTML += `
+                    <h2>Nilai Anda belum mencapai ${passingScore}. Ayo coba lagi!</h2>
+                    <button onclick="retryQuiz()" class="retry-btn">Ulangi Kuis</button>
+                `;
+            }
+            resultDiv.innerHTML = messageHTML;
+        }
+        
+        // Function to retry the quiz
+        function retryQuiz() {
+            quizForm.reset(); // Clear all selected answers
+            resultDiv.style.display = 'none'; // Hide the result box
+            resultDiv.className = 'result-container';
+
+            // Remove feedback classes and re-enable radio buttons
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionBlock = document.getElementById(`q${i}-block`);
+                questionBlock.classList.remove('correct', 'incorrect');
+                const options = questionBlock.querySelectorAll('.options input');
+                options.forEach(option => {
+                    option.disabled = false;
+                });
+            }
+            
+            // Scroll to the top of the page for a fresh start
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
